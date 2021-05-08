@@ -1,0 +1,197 @@
+@import "../../utils/variables.scss";
+
+.admindashboard {
+  display: flex;
+  .main-content {
+    margin-left: 200px;
+    width: 100%;
+
+    .admin-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0d5d61;
+      color: $white;
+      padding: 0px 2rem;
+
+      .menu {
+        margin: 1rem;
+        visibility: hidden;
+        i {
+          font-size: 2rem;
+        }
+      }
+      ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+
+        // li {
+        // }
+      }
+    }
+    .dashboard {
+      padding: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .greeting {
+        width: 100%;
+      }
+      .card {
+        min-height: 70px;
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+        background: $primary_color;
+        box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+        color: $white;
+        .title {
+          font-weight: bold;
+          font-size: 20px;
+          padding: 1rem;
+          text-align: center;
+        }
+        .content {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          font-weight: bold;
+        }
+        .fas {
+          font-size: 4rem;
+        }
+      }
+      .title {
+        margin-bottom: 20px;
+      }
+      .appointments {
+        margin: auto;
+        background-color: $white;
+        width: 80%;
+        min-height: 500px;
+        border-radius: 20px;
+        display: flex;
+
+        .content-container {
+          flex: 1;
+          margin: 10px;
+          .buttons {
+            margin: 0 10px 0 10px;
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px black;
+            border-style: none none dashed none;
+            button {
+              font: 20px bold;
+              margin: 10px;
+              border: none;
+              background: transparent;
+            }
+          }
+          .content {
+            min-height: 300px;
+            * {
+              margin: 10px;
+            }
+            .scheduled {
+              display: none;
+            }
+            .finished {
+              display: none;
+
+              .slot {
+                margin-right: 0;
+                padding: 0.5em;
+                align-self: center;
+                text-align: center;
+                width: 25%;
+                background-color: $primary_color;
+                color: $white;
+              }
+            }
+            .active {
+              display: flex;
+              flex-direction: column;
+            }
+            .appointment-card {
+              align-self: center;
+              display: flex;
+              width: 100%;
+              .doctor-img {
+                width: 70px;
+                height: 80px;
+                background-color: #6b7270;
+                img {
+                  width: 80%;
+                }
+              }
+              .details {
+                .details {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  width: 200px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary_color;
+
+  .logo {
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+
+    .btn {
+      padding: 1rem;
+      // text-align: center;
+      border: none;
+      text-decoration: none;
+      background-color: #0d5d61;
+      border-bottom: 2px solid #6b7270;
+      font-size: 1rem;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        border-left: 8px solid $white;
+      }
+      &:active {
+        border-left: 8px solid $white;
+      }
+      .fas {
+        margin-right: 5px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile_size) {
+  .sidebar {
+    width: 50px;
+    .buttons {
+    }
+  }
+  .main-content {
+    .dashboard {
+      .appointments {
+        width: 100%;
+      }
+    }
+  }
+}

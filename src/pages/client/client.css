@@ -1,0 +1,80 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.active {
+  display: block;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal .add-admin {
+  width: 100%;
+  /* margin: 2rem; */
+}
+
+.modal .add-admin form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal .add-admin form label {
+  color: rgb(96 103 117);
+  font-weight: bold;
+  /* font-size: 1.4rem; */
+  text-align: start;
+}
+
+.modal .add-admin form input {
+  padding: 1rem;
+  border: #6b7270 dashed 1px;
+  border-radius: 10px;
+  background-color: rgb(96 103 117);
+  color: white;
+}
+.modal .add-admin form input:focus {
+  outline: none;
+}
+
+.modal .add-admin form .btnModal {
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(9, 82, 218);
+  border: none;
+}
